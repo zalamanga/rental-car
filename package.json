@@ -1,0 +1,13 @@
+{
+  "name": "rental-car",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Katalog dan estimasi sewa mobil yang disimpan di browser.",
+  "type": "module",
+  "engines": { "node": "^22.13.0 || >=24.0.0" },
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check js/app.js && node --check js/cart.js && node --check scripts/serve.js && npm test"
+  }
+}

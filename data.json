@@ -1,0 +1,8 @@
+{"cars":[
+ {"id":"corolla","name":"Toyota Corolla","category":"sedan","color":"Hitam","dailyPrice":300000,"image":"images/Product/corolla.jpeg"},
+ {"id":"civic","name":"Honda Civic","category":"sedan","color":"Hitam","dailyPrice":350000,"image":"images/Product/civic.jpg"},
+ {"id":"fortuner","name":"Toyota Fortuner","category":"suv","color":"Hitam","dailyPrice":500000,"image":"images/Product/fortuner.webp"},
+ {"id":"pajero","name":"Mitsubishi Pajero","category":"suv","color":"Putih","dailyPrice":550000,"image":"images/Product/pajero.webp"},
+ {"id":"avanza","name":"Toyota Avanza","category":"mpv","color":"Hitam","dailyPrice":250000,"image":"images/Product/Avanza.jpeg"},
+ {"id":"xenia","name":"Daihatsu Xenia","category":"mpv","color":"Silver","dailyPrice":230000,"image":"images/Product/xenia.jpg"}
+]}

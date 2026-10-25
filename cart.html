@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Atur jumlah hari dan unit, periksa rincian tarif, lalu unduh estimasi sewa mobil.">
+  <title>Keranjang estimasi | Sewa Mobil</title>
+  <link rel="icon" href="images/rental.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="cart">
+  <a class="skip" href="#main">Lewati navigasi</a>
+  <header class="site-header"><div class="navigation wrap">
+    <a class="brand" href="index.html" aria-label="Sewa Mobil, beranda"><img src="images/rental.png" width="236" height="62" alt="Sewa mobil"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav id="navigation" aria-label="Navigasi utama"><a href="index.html">Beranda</a><a href="produk.html">Pilihan mobil</a><a href="cart.html" aria-current="page">Keranjang <span data-cart-count>0</span></a></nav>
+    <button class="theme-toggle" type="button">Tema gelap</button>
+  </div></header>
+  <main class="wrap page-main" id="main">
+    <div class="page-heading"><div><p class="kicker">Rincian perhitungan</p><h1>Keranjang estimasi.</h1></div><p>Jumlah hari dan unit tersimpan di browser ini. Tidak ada pembayaran atau pemesanan otomatis.</p></div>
+    <p class="notice" id="storage-notice" role="status" hidden></p>
+    <p id="result-count" role="status">Memuat rincian keranjang…</p>
+    <div class="state-panel" id="load-error" role="alert" hidden><h2>Rincian belum dapat dimuat.</h2><p>Katalog diperlukan untuk menghitung tarif terbaru dari proyek. Coba muat ulang.</p><button class="button primary" id="retry" type="button">Muat ulang rincian</button></div>
+    <div class="state-panel" id="empty-cart" hidden><h2>Belum ada mobil di keranjang.</h2><p>Pilih mobil dari katalog untuk mulai menghitung estimasi.</p><a class="button primary" href="produk.html">Pilih mobil</a></div>
+    <div class="quote-layout" id="quote-layout" hidden>
+      <div><div id="cart-items" aria-busy="true"></div><a class="text-link" href="produk.html">Tambah pilihan mobil</a></div>
+      <aside class="quote-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Ringkasan biaya</h2>
+        <dl><div><dt>Subtotal sewa</dt><dd id="subtotal"></dd></div><div><dt>Biaya simulasi 10%</dt><dd id="fee"></dd></div><div class="grand-total"><dt>Total estimasi</dt><dd id="total"></dd></div></dl>
+        <p class="fine-print">Biaya tambahan ini aturan contoh latihan, bukan perhitungan pajak resmi. Belum termasuk supir, bahan bakar, dan deposit.</p>
+        <button class="button primary" id="download" type="button">Unduh ringkasan .txt</button>
+        <p id="validation-message" class="field-error" role="status" hidden></p>
+        <p class="fine-print">File ringkasan bukan bukti booking atau pembayaran.</p>
+      </aside>
+    </div>
+    <noscript><p class="notice">Aktifkan JavaScript untuk melihat keranjang dan menghitung estimasi.</p></noscript>
+  </main>
+  <footer class="wrap site-footer"><span>Sewa Mobil · Proyek belajar</span><a href="index.html#cara-menghitung">Cara menghitung estimasi</a></footer>
+  <p class="toast" id="notification" role="status" hidden></p>
+</body>
+</html>

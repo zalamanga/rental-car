@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bandingkan enam tarif contoh mobil sedan, SUV dan MPV untuk estimasi rental.">
+  <title>Pilihan mobil | Sewa Mobil</title>
+  <link rel="icon" href="images/rental.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="catalogue">
+  <a class="skip" href="#main">Lewati navigasi</a>
+  <header class="site-header">
+    <div class="navigation wrap">
+      <a class="brand" href="index.html" aria-label="Sewa Mobil, beranda"><img src="images/rental.png" width="236" height="62" alt="Sewa mobil"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Navigasi utama"><a href="index.html">Beranda</a><a href="produk.html" aria-current="page">Pilihan mobil</a><a href="cart.html">Keranjang <span data-cart-count>0</span></a></nav>
+      <button class="theme-toggle" type="button">Tema gelap</button>
+    </div>
+  </header>
+  <main class="wrap page-main" id="main">
+    <div class="page-heading"><div><p class="kicker">Tarif contoh dari proyek asli</p><h1>Pilih mobil untuk rencanamu.</h1></div><p>Harga per hari. Kamu dapat mengatur hari dan jumlah unit di keranjang.</p></div>
+    <p class="notice" id="storage-notice" role="status" hidden></p>
+    <form class="filters" id="filters" role="search">
+      <label>Cari nama mobil<input id="search" type="search" maxlength="100" placeholder="Misalnya Toyota" autocomplete="off"></label>
+      <label><span id="category-label">Jenis mobil</span><select id="category" aria-labelledby="category-label"><option value="all">Semua jenis</option><option value="sedan">Sedan</option><option value="suv">SUV</option><option value="mpv">MPV</option></select></label>
+      <label><span id="sort-label">Urutkan</span><select id="sort" aria-labelledby="sort-label"><option value="name">Nama A–Z</option><option value="cheapest">Tarif terendah</option><option value="expensive">Tarif tertinggi</option></select></label>
+      <button class="button secondary" type="reset">Reset filter</button>
+    </form>
+    <p class="results-label" id="result-count" role="status">Memuat katalog mobil…</p>
+    <div class="state-panel" id="load-error" role="alert" hidden><h2>Katalog belum dapat dimuat.</h2><p>Periksa koneksi ke server lokal, lalu coba lagi.</p><button class="button primary" id="retry" type="button">Muat ulang katalog</button></div>
+    <div class="state-panel" id="empty-results" hidden><h2>Tidak ada mobil yang cocok.</h2><p>Ubah kata pencarian atau reset filter untuk melihat pilihan lain.</p></div>
+    <div class="car-grid" id="cars" aria-busy="true"></div>
+    <p class="fine-print">Demo estimasi. Pilihan mobil bukan konfirmasi ketersediaan dan tidak menahan armada.</p>
+    <noscript><p class="notice">Aktifkan JavaScript untuk memuat katalog dan menghitung estimasi.</p></noscript>
+  </main>
+  <footer class="wrap site-footer"><span>Sewa Mobil · Proyek belajar</span><a href="cart.html">Lihat keranjang estimasi</a></footer>
+  <p class="toast" id="notification" role="status" hidden></p>
+</body>
+</html>
